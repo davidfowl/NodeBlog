@@ -1,0 +1,16 @@
+<h1><%-title%></h1>
+
+<div id="articles">
+<% articles.forEach(function(article){ %>
+	<div class="article">
+		<div class="created_at"><%-article.created_at%></div>
+		<div class="title">
+			<a href="/blog/<%-article._id%>"><%-article.title%></a>
+		</div>
+		<div class="body">
+			<%-article.body%>
+		</div>
+	</div>
+<% }) %>
+</div>
+<a href="/blog/new">New post</a>
